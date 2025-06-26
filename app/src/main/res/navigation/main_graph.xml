@@ -19,7 +19,11 @@
     <fragment
         android:id="@+id/fragmentB"
         android:name="com.example.projetointegrador.FragmentB"
-        tools:layout="@layout/fragment_b" />
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentG"
+            app:destination="@id/fragmentG" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentC"
         android:name="com.example.projetointegrador.FragmentC"
@@ -47,5 +51,13 @@
     <fragment
         android:id="@+id/fragmentF"
         android:name="com.example.projetointegrador.FragmentF"
-        android:label="FragmentF" />
+        android:label="FragmentF" >
+        <action
+            android:id="@+id/action_fragmentF_to_fragmentA"
+            app:destination="@id/fragmentA" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentG"
+        android:name="com.example.projetointegrador.FragmentG"
+        android:label="FragmentG" />
 </navigation>

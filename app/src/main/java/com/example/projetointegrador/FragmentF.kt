@@ -7,16 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.projetointegrador.databinding.FragmentEBinding
+import com.example.projetointegrador.databinding.FragmentFBinding
 
 class FragmentF : Fragment() {
-    private var _binding: FragmentEBinding? = null
+    private var _binding: FragmentFBinding? = null
     private val binding get() = _binding!!
 
 override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-    _binding = FragmentEBinding.inflate(inflater, container, false)
+    _binding = FragmentFBinding.inflate(inflater, container, false)
     return binding.root
 }
 
@@ -27,6 +28,9 @@ override fun onCreateView(
     }
 
     private fun initListeners(){
+        binding.buttonLogin.setOnClickListener{
+            findNavController().navigate(R.id.action_fragmentF_to_fragmentA)
+        }
         binding.buttonBack.setOnClickListener{
             findNavController().navigateUp() }
     }

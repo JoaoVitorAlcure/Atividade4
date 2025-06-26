@@ -6,39 +6,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.projetointegrador.databinding.FragmentBBinding
+import com.example.projetointegrador.databinding.FragmentEBinding
+import com.example.projetointegrador.databinding.FragmentFBinding
+import com.example.projetointegrador.databinding.FragmentGBinding
 
-
-class FragmentB : Fragment() {
-
-    private var _binding: FragmentBBinding? = null
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+class FragmentG : Fragment() {
+    private var _binding: FragmentGBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentBBinding.inflate(inflater, container, false)
+        _binding = FragmentGBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         initListeners()
     }
 
     private fun initListeners(){
-        binding.button.setOnClickListener{
-            findNavController().navigate(R.id.action_fragmentB_to_fragmentG)}
         binding.buttonBack.setOnClickListener{
-            findNavController().navigateUp()}
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+            findNavController().navigateUp() }
+        binding.buttonBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
     }
 }

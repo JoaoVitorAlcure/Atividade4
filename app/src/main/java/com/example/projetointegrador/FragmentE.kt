@@ -35,10 +35,10 @@ class FragmentE : Fragment() {
     }
 
     private fun initListeners(){
-        binding.buttonLogin.setOnClickListener{
-            findNavController().navigate(R.id.action_fragmentE_to_fragmentF) }
+        binding.btnLogin.setOnClickListener{
+            findNavController().navigate(R.id.action_fragmentE_to_fragmentF)}
         binding.buttonBack.setOnClickListener{
-            findNavController().navigateUp() }
+            findNavController().navigateUp()}
     }
 
 
